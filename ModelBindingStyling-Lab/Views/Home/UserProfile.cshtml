@@ -46,14 +46,15 @@
         <dd class = "col-sm-10">
             @Model.GitHubUrl
         </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.DateOfBirth)
+        </dt>
+        <dd>
+            @Model.DateOfBirth.ToString("yyyy-MM-dd");
+        </dd>
         <dt>Skilled Languages</dt>
         <dd>
-            <ul>
-                @foreach(string languageSkill in Model.SkilledLanguages)
-                {
-                    <li>@languageSkill</li>
-                }
-            </ul>
+            @string.Join(", ", Model.SkilledLanguages)
         </dd>
     </dl>
 </div>

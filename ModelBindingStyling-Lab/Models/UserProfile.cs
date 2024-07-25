@@ -8,6 +8,7 @@ namespace ModelBindingStyling_Lab.Models
     /// </summary>
     public class UserProfile
     {
+        [Display(Name = "User Profile ID")]
         public int UserProfileId { get; set; }
 
         /// <summary>
